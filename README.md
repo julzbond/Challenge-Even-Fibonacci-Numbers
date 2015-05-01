@@ -17,9 +17,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 6. The second test is broken, fix it!
 
 ## Caveats
-The function should return the sum of all the even numbers in the fibonacci sequence where the value of the term does not exceed **n**.
-
-Remember, **n** is not how many numbers in the fibonacci sequence, it is the **max value, the last term in a fibonacci sequence** where you will then add up all **even** numbers.
+Remember, **n** is the **max** value of a fibonacci number, **NOT* the **nth** fibonacci number in the sequence.
 
 ### references
 [Fibonacci on Wikipedia](http://en.wikipedia.org/wiki/Fibonacci_number)
