@@ -1,16 +1,23 @@
-exports.sumOfEvenFibonacciNumbers = function(n){
+exports.sumOfEvenFibonacciNumbers = function (n){
+  var fibArray = [];
+  fib[0] = 1;
+  fib[1] = 1;
+  var i = 1;
+  do{
+    fibArray.push(fibArray[i] + fibArray[i-1]);
+    i++;
+  } while (fibArray[i] < n);
+
+  var fibArrayEven = [];
+  for (var j = 0; j < fibArray.length; j++){
+    if(fibArray[j] % 2 === 0) {
+      fibArrayEven.push(fibArray[j]);
+    }
+  }
+
   var sum = 0;
-  var x;
-  for(var i = 0, j = 1, k = 0; k < n; i = j, j = x, k++){
-    if (i >= n) {
-      break;
-    }
-    console.log('i', i);
-    x = i + j;
-    if (x % 2 === 0) {
-      sum += x;
-    }
-    console.log('sum', sum);
+  for (var k = 0; k < fibArrayEven.length; k++){
+    sum += fibArrayEven[k];
   }
   return sum;
-};
+}
